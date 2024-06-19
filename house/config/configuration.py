@@ -56,26 +56,127 @@ class Configuration:
         except Exception as e:
             raise HouseException(e,sys) from e
         
-    def get_data_validation_config(self) -> DataTransformationConfig: 
+    def get_data_validation_config(self) -> DataValidationConfig: 
         try:
-            schema_file_path=None
+            artifacts_dir=self.training_pipeline_config.artifact_dir
+            data_validation_artifact_dir=os.path.join(artifacts_dir,
+                                                      DATA_VALIDATION_ARTIFACT_DIR_NAME,
+                                                      self.time_stamp
+                                                      )
+            data_validation_config=self.config_info[DATA_VALIDATION_CONFIG_KEY]
+            
+            schema_file_path=os.path.join(ROOT_DIR,
+                                          data_validation_config[DATA_VALIDATION_SCHEMA_DIR_KEY],
+                                          data_validation_config[DATA_VALIDATION_SCHEMA_FILE_NAME_KEY])
+            
+            report_file_path=os.path.join(data_validation_artifact_dir,
+                                          data_validation_config[DATA_VALIDATION_REPORT_FILE_NAME_KEY])
+            report_page_file_path=os.path.join(data_validation_artifact_dir,
+                                               data_validation_config[DATA_VALIDATION_REPORT_PAGE_FILE_NAME_KEY])
+            
             data_validation_config=DataValidationConfig(
-               schema_file_path= schema_file_path
+               schema_file_path= schema_file_path,
+               report_file_path=report_file_path,
+               report_page_file_path=report_page_file_path
             )
+            return data_validation_config 
         except Exception as e:
             raise HouseException(e,sys) from e
 
-    def get_data_transformation_config(self) -> DataValidationConfig: 
-        pass
+    def get_data_transformation_config(self) -> DataTransformationConfig: 
+        try:
+            logging.info(f"{'*'*20},Data Transformation process started {'*'*20}")
+            artifacts_dir=self.training_pipeline_config.artifact_dir
+            data_transformation_dir=os.path.join(artifacts_dir,DATA_TRANSFORMATION_ARTIFACT_DIR)
+            data_transformation_config=self.config_info[DATA_TRANSFORMATION_CONFIG_KEY]
+            
+            add_bedroom_per_room=data_transformation_config[DATA_TRANSFORMATION_ADD_BEDROOM_PER_ROOM_KEY]
+            
+            transformed_train_dir=os.path.join(data_transformation_dir,
+                                              self.time_stamp,
+                                              data_transformation_config[DATA_TRANSFORMATION_DIR_NAME_KEY],
+                                              data_transformation_config[DATA_TRANSFORMATION_TRAIN_DIR_NAME_KEY])
+            
+            
+            transformed_test_dir=os.path.join(data_transformation_dir,
+                                              self.time_stamp,
+                                              data_transformation_config[DATA_TRANSFORMATION_DIR_NAME_KEY],
+                                              data_transformation_config[DATA_TRANSFORMATION_TEST_DIR_NAME_KEY])
+            preprocessed_object_file_path=os.path.join(data_transformation_dir,
+                                              self.time_stamp,
+                                              data_transformation_config[DATA_TRANSFORMATION_PREPROCESSING_DIR_KEY],
+                                              data_transformation_config[DATA_TRANSFORMATION_PREPROCESSED_FILE_NAME_KEY])
+            
+            data_transformation_artifact=DataTransformationConfig(add_bedroom_per_room=add_bedroom_per_room,
+                                                                  transformed_train_dir=transformed_train_dir,
+                                                                  transformed_test_dir=transformed_test_dir,
+                                                                  preprocessed_object_file_path=preprocessed_object_file_path)
+            
+            logging.info(f"Data Transformation config process completed {data_transformation_artifact}")
+            
+            return data_transformation_artifact
+            
+            
+        except Exception as e:
+            raise HouseException(e,sys) from e
 
     def get_model_trainer_config(self) -> ModelTrainerConfig:
-        pass
+        try:
+            logging.info(f"{'*'*20},Model Trainer process started {'*'*20}")
+            
+            artifact_dir= self.training_pipeline_config.artifact_dir
+            model_training_artifact_dir=os.path.join(artifact_dir,
+                                                     MODEL_TRAINING_ARTIFACT_DIR,
+                                                     self.time_stamp)
+            
+            model_trainer_config_info=self.config_info[MODEL_TRAINING_CONFIG_KEY]
+            trained_model_file_path=os.path.join(model_training_artifact_dir,
+                                                 model_trainer_config_info[MODEL_TRAINING_TRAINED_MODEL_DIR_KEY],
+                                                 model_trainer_config_info[MODEL_TRAINING_TRAINED_MODEL_FILE_NAME_KEY]
+                                                 )
+            model_config_file_path=os.path.join(model_trainer_config_info[MODEL_TRAINING_TRAINED_MODEL_DIR_KEY],
+                                                model_trainer_config_info[MODEL_TRAINING_MODEL_CONFIG_FILE_NAME_KEY])
+            
+            base_accuracy=model_trainer_config_info[MODEL_TRAINING_BASE_ACCURACY_KEY]
+            
+            model_trainer_config=ModelTrainerConfig(trained_model_file_path=trained_model_file_path,
+                                                    base_accuracy=base_accuracy,
+                                                    model_config_file_path=model_config_file_path)
+            
+            logging.info(f"model_trainer_config:{model_trainer_config}")
+            
+            return model_trainer_config     
+        except Exception as e:
+            raise HouseException(e,sys) from e
 
     def get_model_evaluation_config(self)-> ModelEvaluationConfig :
-        pass
+        try:
+            logging.info(f"{'*'*20},Model Evaluation process started {'*'*20}")
+            model_evaluation_config=self.config_info[MODEL_PUSHER_CONFIG_KEY]
+            artifact_dir=os.path.join(self.training_pipeline_config.artifact_dir,
+                                                       MODEL_EVALUATION_ARTIFACT_DIR)
+            model_evaluation_file_path=os.path.join(artifact_dir,
+                                                    model_evaluation_config[MODEL_EVALUATION_FILE_NAME_KEY])
+            response = ModelEvaluationConfig(model_evaluation_file_path=model_evaluation_file_path,
+                                             time_stamp=self.time_stamp)
+            
+            logging.info(f"Model evaluation config: {response}.")
+            return response
+        except Exception as e:
+            raise HouseException(e,sys) from e
 
     def get_model_pusher_config(self) -> ModelPusherConfig :
-        pass     
+        try:
+            time_stamp=f"{datetime.now().strftime('%Y%m%d%H%M%S')}"
+            model_pusher_config_info=self.config_info[MODEL_PUSHER_CONFIG_KEY]
+            model_pusher_dir_key=model_pusher_config_info[MODEL_PUSHER_MODEL_EXPORT_DIR_KEY]
+            export_dir_path=os.path.join(ROOT_DIR,model_pusher_dir_key,time_stamp)
+            
+            model_pusher_config=ModelPusherConfig(export_dir_path=export_dir_path)
+            logging.info(f"Model Pusher config {model_pusher_config}")
+            return model_pusher_config
+        except Exception as e:
+            raise HouseException(e,sys) from e   
              
     def get_training_pipeline_config(self) ->TrainingPipelineConfig:
         try:

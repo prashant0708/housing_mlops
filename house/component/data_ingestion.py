@@ -1,4 +1,3 @@
-
 from house.config.configuration import  Configuration
 from house.exception import HouseException
 from house.logger import logging
