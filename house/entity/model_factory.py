@@ -10,6 +10,7 @@ from collections import namedtuple
 from typing import List
 from house.logger import logging
 from sklearn.metrics import r2_score,mean_squared_error
+from house.constant import *
 
 GRID_SEARCH_KEY ="grid_search"
 MODULE_KEY= "module"
@@ -228,13 +229,17 @@ class ModelFactory:
             #instantiating GridsearchCV class
             
             grid_search_cv_ref = ModelFactory.class_for_name(module_name=self.grid_search_cv_module,
-                                                             class_name=self.grid_search_cv_class_name)
+                                                             class_name=self.grid_search_class_name)
             grid_search_cv = grid_search_cv_ref(estimator=initialized_model.model,
                                                 param_grid=initialized_model.param_grid_search)
             
             grid_search_cv = ModelFactory.update_property_of_class(grid_search_cv,
                                                                    self.grid_search_property_data)
             
+            message = f'{">>"* 30} f"Training {type(initialized_model.model).__name__} Started." {"<<"*30}'
+            logging.info(message)
+            grid_search_cv.fit(input_feature, output_feature)
+            print(grid_search_cv.best_estimator_)
             message= f"{'>>'*30} Training {type(initialized_model.model).__name__} completed {'<<'*30}"
             
             grid_searched_best_model= GridSearchedBestModel(model_serial_number=initialized_model.model_serial_number,
@@ -360,11 +365,11 @@ class ModelFactory:
             logging.info("Started Initializing model from config file")
             initialized_model_list=self.get_initialized_model_list()
             logging.info(f"Initialized model: {initialized_model_list}")
-            grid_searched_best_model_list = self.initiate_best_parameter_search_for_initialized_model(
-                initialized_model_list=initialized_model_list,
-                input_feature=x,
-                output_feature=y
-            )
+            grid_searched_best_model_list = self.initiate_best_parameter_search_for_initialized_models(initialized_model_list=initialized_model_list,
+                                                                                                       input_feature=x,
+                                                                                                       output_feature=y)
+            logging.info(f"Grid searched best model: {grid_searched_best_model_list}")
+            
             return ModelFactory.get_best_model_from_grid_searched_best_model_list(grid_searched_best_model_list,
                                                                                   base_accuracy=base_accuracy)
         except Exception as e:

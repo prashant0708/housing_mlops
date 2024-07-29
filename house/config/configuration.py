@@ -134,7 +134,7 @@ class Configuration:
                                                  model_trainer_config_info[MODEL_TRAINING_TRAINED_MODEL_DIR_KEY],
                                                  model_trainer_config_info[MODEL_TRAINING_TRAINED_MODEL_FILE_NAME_KEY]
                                                  )
-            model_config_file_path=os.path.join(model_trainer_config_info[MODEL_TRAINING_TRAINED_MODEL_DIR_KEY],
+            model_config_file_path=os.path.join(model_trainer_config_info[MODEL_TRAINING_MODEL_CONFIG_DIR_KEY],
                                                 model_trainer_config_info[MODEL_TRAINING_MODEL_CONFIG_FILE_NAME_KEY])
             
             base_accuracy=model_trainer_config_info[MODEL_TRAINING_BASE_ACCURACY_KEY]
@@ -152,7 +152,7 @@ class Configuration:
     def get_model_evaluation_config(self)-> ModelEvaluationConfig :
         try:
             logging.info(f"{'*'*20},Model Evaluation process started {'*'*20}")
-            model_evaluation_config=self.config_info[MODEL_PUSHER_CONFIG_KEY]
+            model_evaluation_config=self.config_info[MODEL_EVALUATION_CONFIG_KEY]
             artifact_dir=os.path.join(self.training_pipeline_config.artifact_dir,
                                                        MODEL_EVALUATION_ARTIFACT_DIR)
             model_evaluation_file_path=os.path.join(artifact_dir,

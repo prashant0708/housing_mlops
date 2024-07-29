@@ -6,10 +6,14 @@ LOG_DIR= "housing_logs"
 
 CURRENT_TIME_STEMP= f"{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}"
 
-LOG_FILE_NAME=f"log_{CURRENT_TIME_STEMP}.log"
 
-if not os.path.exists(LOG_DIR):
-    os.makedirs(LOG_DIR)
+def get_log_file_name():
+    return f"log_{CURRENT_TIME_STEMP}.log"
+
+LOG_FILE_NAME=get_log_file_name()
+
+
+os.makedirs(LOG_DIR,exist_ok=True)
 
 LOG_FILE_PATH =os.path.join(LOG_DIR,LOG_FILE_NAME)
 

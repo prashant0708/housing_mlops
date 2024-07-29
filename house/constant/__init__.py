@@ -7,6 +7,8 @@ CONFIG_DIR="config"
 CONFIG_FILE_NAME="config.yaml"
 CONFIG_FILE_PATH=os.path.join(ROOT_DIR,CONFIG_DIR,CONFIG_FILE_NAME)
 
+
+
 CURRENT_TIME_STAMP=F"{datetime.now().strftime('%Y-%m-%d-%H-%M-%S')}"
 
 
@@ -62,10 +64,11 @@ DATASET_SCHEMA_COLUMNS_KEY=  "columns"
 ## Model training related variables
 
 MODEL_TRAINING_ARTIFACT_DIR="model_training"
-MODEL_TRAINING_CONFIG_KEY="model_training_config"
+MODEL_TRAINING_CONFIG_KEY="model_trainer_config"
 MODEL_TRAINING_TRAINED_MODEL_DIR_KEY="trained_model_dir"
 MODEL_TRAINING_TRAINED_MODEL_FILE_NAME_KEY="model_file_name"
 MODEL_TRAINING_BASE_ACCURACY_KEY="base_accuracy"
+MODEL_TRAINING_MODEL_CONFIG_DIR_KEY = "model_config_dir"
 MODEL_TRAINING_MODEL_CONFIG_FILE_NAME_KEY="model_config_file_name"
 
 MODEL_EVALUATION_CONFIG_KEY="model_evaluation_config"

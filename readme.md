@@ -30,3 +30,25 @@ To add the remote repo
 git remote add origin
 
 ```
+
+TO add the changes to staging area (add all the files)
+```
+git add . 
+
+```
+To add the specific file into staging area 
+```
+git add <file_name>
+```
+To commit the changes
+```
+git commit -m "commit message"
+```
+To push the changes to remote repo
+```
+git push origin main
+```
+To pull the changes from remote repo
+```
+git pull origin main
+```
