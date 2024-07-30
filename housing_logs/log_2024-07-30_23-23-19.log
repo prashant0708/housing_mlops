@@ -1,0 +1,5 @@
+[2024-07-30 23:23:20,142] root -INFO - Training pipeline config: TrainingPipelineConfig(artifact_dir='C:\\Users\\prash\\Downloads\\Housing_mlops\\housing\\artifact')
+[2024-07-30 23:23:20,900] root -INFO - Training pipeline config: TrainingPipelineConfig(artifact_dir='C:\\Users\\prash\\Downloads\\Housing_mlops\\housing\\artifact')
+[2024-07-30 23:23:20,901] root -INFO - Training pipeline config: TrainingPipelineConfig(artifact_dir='C:\\Users\\prash\\Downloads\\Housing_mlops\\housing\\artifact')
+[2024-07-30 23:23:20,901] root -INFO - Pipeline starting
+[2024-07-30 23:23:20,901] root -INFO - Pipeline experiment: Experiment(experiment_id='b09c7ab7-bf5f-42fd-a8c5-0c9b90a7de65', initialized_timestamp='2024-07-30-23-23-19', artifact_time_stamp='2024-07-30-23-23-19', running_status=True, start_time=datetime.datetime(2024, 7, 30, 23, 23, 20, 901533), stop_time=None, execution_time=None, message='Pipeline has been started', experiment_file_path='C:\\Users\\prash\\Downloads\\Housing_mlops\\housing\\artifact\\experiment\\experiment.csv', accuracy=None, is_model_accepted=None)

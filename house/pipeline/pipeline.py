@@ -28,7 +28,7 @@ Experiment = namedtuple("Experiment",["experiment_id","initialized_timestamp","a
 
 
 
-class Pipelines:
+class Pipelines(Thread):
     experiment:Experiment = Experiment(*([None]*11))
     experiment_file_path=None
 
@@ -36,6 +36,9 @@ class Pipelines:
     def __init__(self, config=Configuration())->None:
         try :
             self.config=config  
+            training_pipeline_config=self.config.get_training_pipeline_config()
+            os.makedirs(training_pipeline_config.artifact_dir,exist_ok=True)
+            Pipelines.experiment_file_path=os.path.join(training_pipeline_config.artifact_dir,EXPERIMENT_DIR_NAME,EXPERIMENT_FILE_NAME)
         except Exception as e:
             raise HouseException(e,sys) from e
         
@@ -101,6 +104,29 @@ class Pipelines:
         
     def run_pipeline(self):
         try:
+            if Pipelines.experiment.running_status:
+                logging.info("Pipeline is already running")
+                return Pipelines.experiment
+            logging.info("Pipeline starting")
+            
+            experiment_id=str(uuid.uuid4())
+            
+            Pipelines.experiment=Experiment(experiment_id=experiment_id,
+                                            initialized_timestamp=self.config.time_stamp,
+                                            artifact_time_stamp=self.config.time_stamp,
+                                            running_status=True,
+                                            start_time=datetime.now(),
+                                            stop_time=None,
+                                            execution_time=None,
+                                            experiment_file_path=Pipelines.experiment_file_path,
+                                            is_model_accepted=None,
+                                            message="Pipeline has been started",
+                                            accuracy=None
+                                            )
+            
+            logging.info(f"Pipeline experiment: {Pipelines.experiment}")
+            self.save_experiment()
+            
              ## dataingestion
                 
             data_ingestion_artifact=self.start_data_ingestion()
@@ -119,7 +145,65 @@ class Pipelines:
             else:
                 logging.info("Trained model rejected")
             logging.info("Pipeline completed")
+            
+            stop_time=datetime.now()
+            
+            Pipelines.experiment=Experiment(experiment_id=Pipelines.experiment.experiment_id,
+                                             initialized_timestamp=self.config.time_stamp,
+                                             artifact_time_stamp=self.config.time_stamp,
+                                             running_status=False,
+                                             start_time=Pipelines.experiment.start_time,
+                                             stop_time=stop_time,
+                                             execution_time=stop_time - Pipelines.experiment.start_time,
+                                             message="Pipeline has been completed.",
+                                             experiment_file_path=Pipelines.experiment_file_path,
+                                             is_model_accepted=model_evaluation_artifact.is_model_accepted,
+                                             accuracy=model_trainer_artifact.model_accuracy
+                                            )
+            logging.info(f"Pipeline experiment: {Pipelines.experiment}")
+            self.save_experiment()
         except Exception as e:
             raise HouseException(e,sys) from e
+    def run(self):
+        try:
+            self.run_pipeline()
+        except Exception as e:
+            raise e
+        
+    def save_experiment(self):
+        try:
+            if Pipelines.experiment.experiment_id is not None:
+                experiment=Pipelines.experiment
+                file_path=experiment.experiment_file_path
+                experiment_dict=experiment._asdict()
+                experiment_dict:dict = {key:[value] for key , value in experiment_dict.items()}
+                
+                experiment_dict.update({
+                    "created_time_stamp":[datetime.now()],
+                    "experiment_file_path":[os.path.basename(file_path)]})
+                
+                experiment_report = pd.DataFrame(experiment_dict)
+                
+                os.makedirs(os.path.dirname(Pipelines.experiment_file_path),exist_ok=True)
+                if os.path.exists(Pipelines.experiment_file_path):
+                    experiment_report.to_csv(Pipelines.experiment_file_path,index=False,header=False,mode="a")
+                else:
+                    experiment_report.to_csv(Pipelines.experiment_file_path,index=False,header=False,mode="w")
+            else:
+                print("First start experiment")
+        except Exception as e:
+            raise HouseException(e,sys) from e
+        
+    @classmethod
+    def get_experiments_status(cls, limit: int = 5) -> pd.DataFrame:
+        try:
+            if os.path.exists(Pipelines.experiment_file_path):
+                df = pd.read_csv(Pipelines.experiment_file_path)
+                limit = -1 * int(limit)
+                return df[limit:].drop(columns=["experiment_file_path", "initialization_timestamp"], axis=1)
+            else:
+                return pd.DataFrame()
+        except Exception as e:
+            raise HouseException(e, sys) from e
             
             
