@@ -1,8 +1,0 @@
-[2024-05-09 00:44:20,489] root -INFO - Training pipeline config: TrainingPipelineConfig(artifact_dir='C:\\Users\\prash\\Downloads\\Housing_mlops\\housing\\artifact')
-[2024-05-09 00:44:21,633] root -INFO - Training pipeline config: TrainingPipelineConfig(artifact_dir='C:\\Users\\prash\\Downloads\\Housing_mlops\\housing\\artifact')
-[2024-05-09 00:44:21,649] root -INFO - Training pipeline config: TrainingPipelineConfig(artifact_dir='C:\\Users\\prash\\Downloads\\Housing_mlops\\housing\\artifact')
-[2024-05-09 00:44:21,649] root -INFO - ********************,Data Transformation process started ********************
-[2024-05-09 00:44:21,650] root -INFO - Data Transformation config process completed DataTransformationConfig(add_bedroom_per_room=True, 
-transformed_train_dir='C:\\Users\\prash\\Downloads\\Housing_mlops\\housing\\artifact\\data_transformation\\2024-05-09-00-44-16\\transformed_data\\train', 
-transformed_test_dir='C:\\Users\\prash\\Downloads\\Housing_mlops\\housing\\artifact\\data_transformation\\2024-05-09-00-44-16\\transformed_data\\test', 
-preprocessed_object_file_path='C:\\Users\\prash\\Downloads\\Housing_mlops\\housing\\artifact\\data_transformation\\2024-05-09-00-44-16\\preprocessed\\preprocessed.pkl')

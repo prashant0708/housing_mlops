@@ -1,4 +1,0 @@
-[2024-05-09 00:49:00,078] root -INFO - Training pipeline config: TrainingPipelineConfig(artifact_dir='C:\\Users\\prash\\Downloads\\Housing_mlops\\housing\\artifact')
-[2024-05-09 00:49:01,407] root -INFO - Training pipeline config: TrainingPipelineConfig(artifact_dir='C:\\Users\\prash\\Downloads\\Housing_mlops\\housing\\artifact')
-[2024-05-09 00:49:01,412] root -INFO - Training pipeline config: TrainingPipelineConfig(artifact_dir='C:\\Users\\prash\\Downloads\\Housing_mlops\\housing\\artifact')
-[2024-05-09 00:49:01,413] root -INFO - ********************,Data Transformation process started ********************
