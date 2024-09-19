@@ -1,0 +1,27 @@
+[2024-09-19 20:54:22,566]^;INFO^;190^;configuration.py^;get_training_pipeline_config()^;Training pipeline config: TrainingPipelineConfig(artifact_dir='C:\\Users\\prash\\Downloads\\Housing_mlops\\housing\\artifact')
+[2024-09-19 20:54:23,249]^;INFO^;190^;configuration.py^;get_training_pipeline_config()^;Training pipeline config: TrainingPipelineConfig(artifact_dir='C:\\Users\\prash\\Downloads\\Housing_mlops\\housing\\artifact')
+[2024-09-19 20:54:23,432]^;INFO^;224^;_internal.py^;_log()^;[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2024-09-19 20:54:23,432]^;INFO^;224^;_internal.py^;_log()^;[33mPress CTRL+C to quit[0m
+[2024-09-19 20:54:27,957]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [19/Sep/2024 20:54:27] "GET / HTTP/1.1" 200 -
+[2024-09-19 20:54:28,024]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [19/Sep/2024 20:54:28] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2024-09-19 20:54:30,180]^;INFO^;138^;app.py^;saved_models_dir()^;req_path:
+[2024-09-19 20:54:30,181]^;INFO^;139^;app.py^;saved_models_dir()^;req_path:C:\Users\prash\Downloads\Housing_mlops\saved_models\
+[2024-09-19 20:54:30,183]^;ERROR^;1745^;app.py^;log_exception()^;Exception on /saved_models [GET]
+Traceback (most recent call last):
+  File "c:\Users\prash\Downloads\Housing_mlops\venv\lib\site-packages\flask\app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\Users\prash\Downloads\Housing_mlops\venv\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\Users\prash\Downloads\Housing_mlops\venv\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\Users\prash\Downloads\Housing_mlops\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 149, in saved_models_dir
+    return send_file(abs_path)
+  File "c:\Users\prash\Downloads\Housing_mlops\venv\lib\site-packages\flask\helpers.py", line 547, in send_file
+    max_age=max_age,
+  File "c:\Users\prash\Downloads\Housing_mlops\venv\lib\site-packages\werkzeug\utils.py", line 491, in send_file
+    file = open(path, "rb")  # type: ignore
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\prash\\Downloads\\Housing_mlops\\saved_models\\'
+[2024-09-19 20:54:30,192]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [19/Sep/2024 20:54:30] "[35m[1mGET /saved_models HTTP/1.1[0m" 500 -

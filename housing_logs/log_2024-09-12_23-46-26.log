@@ -1,0 +1,25 @@
+[2024-09-12 23:46:27,852]^;INFO^;190^;configuration.py^;get_training_pipeline_config()^;Training pipeline config: TrainingPipelineConfig(artifact_dir='C:\\Users\\prash\\Downloads\\Housing_mlops\\housing\\artifact')
+[2024-09-12 23:46:28,454]^;INFO^;190^;configuration.py^;get_training_pipeline_config()^;Training pipeline config: TrainingPipelineConfig(artifact_dir='C:\\Users\\prash\\Downloads\\Housing_mlops\\housing\\artifact')
+[2024-09-12 23:46:28,653]^;INFO^;224^;_internal.py^;_log()^;[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2024-09-12 23:46:28,654]^;INFO^;224^;_internal.py^;_log()^;[33mPress CTRL+C to quit[0m
+[2024-09-12 23:46:34,657]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [12/Sep/2024 23:46:34] "GET / HTTP/1.1" 200 -
+[2024-09-12 23:46:34,690]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [12/Sep/2024 23:46:34] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2024-09-12 23:46:37,913]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [12/Sep/2024 23:46:37] "GET /predict HTTP/1.1" 200 -
+[2024-09-12 23:46:37,994]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [12/Sep/2024 23:46:37] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2024-09-12 23:46:51,155]^;ERROR^;1745^;app.py^;log_exception()^;Exception on /predict [POST]
+Traceback (most recent call last):
+  File "c:\Users\prash\Downloads\Housing_mlops\venv\lib\site-packages\flask\app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\Users\prash\Downloads\Housing_mlops\venv\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\Users\prash\Downloads\Housing_mlops\venv\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\Users\prash\Downloads\Housing_mlops\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "main12.py", line 56, in predict
+    data=[float(x) for x in request.form.values()]
+  File "main12.py", line 56, in <listcomp>
+    data=[float(x) for x in request.form.values()]
+ValueError: could not convert string to float: '<1H OCEAN'
+[2024-09-12 23:46:51,160]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [12/Sep/2024 23:46:51] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -

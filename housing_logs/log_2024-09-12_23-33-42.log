@@ -1,0 +1,28 @@
+[2024-09-12 23:33:44,240]^;INFO^;190^;configuration.py^;get_training_pipeline_config()^;Training pipeline config: TrainingPipelineConfig(artifact_dir='C:\\Users\\prash\\Downloads\\Housing_mlops\\housing\\artifact')
+[2024-09-12 23:33:45,071]^;INFO^;190^;configuration.py^;get_training_pipeline_config()^;Training pipeline config: TrainingPipelineConfig(artifact_dir='C:\\Users\\prash\\Downloads\\Housing_mlops\\housing\\artifact')
+[2024-09-12 23:33:45,314]^;INFO^;224^;_internal.py^;_log()^;[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2024-09-12 23:33:45,315]^;INFO^;224^;_internal.py^;_log()^;[33mPress CTRL+C to quit[0m
+[2024-09-12 23:34:03,743]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [12/Sep/2024 23:34:03] "GET / HTTP/1.1" 200 -
+[2024-09-12 23:34:03,831]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [12/Sep/2024 23:34:03] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2024-09-12 23:34:09,372]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [12/Sep/2024 23:34:09] "GET / HTTP/1.1" 200 -
+[2024-09-12 23:34:09,524]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [12/Sep/2024 23:34:09] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2024-09-12 23:34:18,799]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [12/Sep/2024 23:34:18] "GET /predict HTTP/1.1" 200 -
+[2024-09-12 23:34:18,845]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [12/Sep/2024 23:34:18] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2024-09-12 23:34:35,416]^;ERROR^;1745^;app.py^;log_exception()^;Exception on /predict [POST]
+Traceback (most recent call last):
+  File "c:\Users\prash\Downloads\Housing_mlops\venv\lib\site-packages\flask\app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\Users\prash\Downloads\Housing_mlops\venv\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\Users\prash\Downloads\Housing_mlops\venv\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\Users\prash\Downloads\Housing_mlops\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 115, in predict
+    housing_df=pd.DataFrame(data)
+  File "c:\Users\prash\Downloads\Housing_mlops\venv\lib\site-packages\pandas\core\frame.py", line 529, in __init__
+    raise ValueError("DataFrame constructor not properly called!")
+ValueError: DataFrame constructor not properly called!
+[2024-09-12 23:34:35,425]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [12/Sep/2024 23:34:35] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+[2024-09-12 23:35:58,351]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [12/Sep/2024 23:35:58] "[36mGET /static/style.css HTTP/1.1[0m" 304 -

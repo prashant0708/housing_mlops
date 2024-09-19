@@ -1,0 +1,5 @@
+[2024-09-18 22:33:24,287]^;INFO^;190^;configuration.py^;get_training_pipeline_config()^;Training pipeline config: TrainingPipelineConfig(artifact_dir='C:\\Users\\prash\\Downloads\\Housing_mlops\\housing\\artifact')
+[2024-09-18 22:33:26,928]^;INFO^;190^;configuration.py^;get_training_pipeline_config()^;Training pipeline config: TrainingPipelineConfig(artifact_dir='C:\\Users\\prash\\Downloads\\Housing_mlops\\housing\\artifact')
+[2024-09-18 22:33:28,294]^;INFO^;224^;_internal.py^;_log()^;[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2024-09-18 22:33:28,295]^;INFO^;224^;_internal.py^;_log()^;[33mPress CTRL+C to quit[0m

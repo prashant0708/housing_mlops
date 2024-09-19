@@ -1,0 +1,13 @@
+[2024-09-18 23:02:30,597]^;INFO^;190^;configuration.py^;get_training_pipeline_config()^;Training pipeline config: TrainingPipelineConfig(artifact_dir='C:\\Users\\prash\\Downloads\\Housing_mlops\\housing\\artifact')
+[2024-09-18 23:02:31,794]^;INFO^;190^;configuration.py^;get_training_pipeline_config()^;Training pipeline config: TrainingPipelineConfig(artifact_dir='C:\\Users\\prash\\Downloads\\Housing_mlops\\housing\\artifact')
+[2024-09-18 23:02:32,064]^;INFO^;224^;_internal.py^;_log()^;[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2024-09-18 23:02:32,065]^;INFO^;224^;_internal.py^;_log()^;[33mPress CTRL+C to quit[0m
+[2024-09-18 23:02:46,258]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [18/Sep/2024 23:02:46] "GET / HTTP/1.1" 200 -
+[2024-09-18 23:02:46,354]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [18/Sep/2024 23:02:46] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2024-09-18 23:02:48,790]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [18/Sep/2024 23:02:48] "GET /predict HTTP/1.1" 200 -
+[2024-09-18 23:02:48,884]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [18/Sep/2024 23:02:48] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2024-09-18 23:02:51,028]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [18/Sep/2024 23:02:51] "GET / HTTP/1.1" 200 -
+[2024-09-18 23:02:51,129]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [18/Sep/2024 23:02:51] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2024-09-18 23:02:52,257]^;INFO^;181^;app.py^;render_log_dir()^;req_path:f{LOG_FOLDER_NAME}
+[2024-09-18 23:02:52,260]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [18/Sep/2024 23:02:52] "[33mGET /housing_logs HTTP/1.1[0m" 404 -

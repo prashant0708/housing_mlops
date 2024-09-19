@@ -1,0 +1,51 @@
+{% extends 'header.html' %} {% block content %}
+<div class="header-index">
+  <div class="content">
+    <h2 class="about">About the Projects</h2>
+    <p class='parah'>
+      This Projects is about predicting the house price.If certain parameter are passed 
+      what will be the approximate price of the house. 
+      Dataset used for this is california house price . This project devloped
+      by using the machine learning Algorithem, Mlops methodology is used for it.
+      This project is coded using python language. 
+    </p>
+  </div>
+  <div class='link'>
+    <iframe class='video-link' src="https://www.youtube.com/embed/qLh-ja9cRqM?si=UNNnBJvF8XgetZnc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+</div>
+<div class = 'box'>
+  <div class='box-1'>
+    <h2 class='box-header'>View Logs</h2>
+    <h3 class='box-subheader'>Log Files</h3>
+    <p class='log-content'>All the model training log file can be downloaded</p>
+    <a class="log-download {% if 'housing_logs' in request.path %} active {% endif %}" href='/housing_logs'>Check logs</a>
+  </div>
+  <div class='box-2'>
+    <h2 class='box-header'>View Artifacts</h2>
+    <h3 class='box-subheader'>Artifacts Files</h3>
+    <p class='log-content'>All the model artifacts file can be downloaded</p>
+    <a class='log-download' href='/log'>Check Artifacts</a>
+  </div>
+  <div class='box-3'>
+    <h2 class='box-header'>View Trained Model</h2>
+    <h3 class='box-subheader'>Trained Model</h3>
+    <p class='log-content'>All the model  file can be downloaded</p>
+    <a class='log-download' href='/log'>Check Models</a>
+  </div>
+  <div class='box-4'>
+    <h2 class='box-header'>Estimate California Price</h2>
+    <h3 class='box-subheader'>Access California estimator</h3>
+    <p class='log-content'>Form will be displayed. Submit the form to get estimated price for california house</p>
+    <a class="log-download {% if 'predict' in request.path %} active {% endif %}" href='/predict' >Get Estimaed Price</a>
+  </div>
+  <div class='box-5'>
+    <h2 class='box-header'>View Trained Models</h2>
+    <h3 class='box-subheader'>Trained Models</h3>
+    <p class='log-content'>All models file can be down </p>
+    <a class='log-download' href='/log'>Check Models</a>
+  </div>
+</div>
+    {%endblock%}
+  </div>
+</div>

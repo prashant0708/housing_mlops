@@ -1,0 +1,15 @@
+[2024-09-18 22:53:14,615]^;INFO^;190^;configuration.py^;get_training_pipeline_config()^;Training pipeline config: TrainingPipelineConfig(artifact_dir='C:\\Users\\prash\\Downloads\\Housing_mlops\\housing\\artifact')
+[2024-09-18 22:53:15,923]^;INFO^;190^;configuration.py^;get_training_pipeline_config()^;Training pipeline config: TrainingPipelineConfig(artifact_dir='C:\\Users\\prash\\Downloads\\Housing_mlops\\housing\\artifact')
+[2024-09-18 22:53:16,482]^;INFO^;224^;_internal.py^;_log()^;[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2024-09-18 22:53:16,483]^;INFO^;224^;_internal.py^;_log()^;[33mPress CTRL+C to quit[0m
+[2024-09-18 22:53:23,711]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [18/Sep/2024 22:53:23] "GET / HTTP/1.1" 200 -
+[2024-09-18 22:53:23,827]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [18/Sep/2024 22:53:23] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2024-09-18 22:53:25,711]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [18/Sep/2024 22:53:25] "GET /predict HTTP/1.1" 200 -
+[2024-09-18 22:53:25,756]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [18/Sep/2024 22:53:25] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2024-09-18 22:53:41,658]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [18/Sep/2024 22:53:41] "[33mGET /housing_logs HTTP/1.1[0m" 404 -
+[2024-09-18 22:54:16,775]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [18/Sep/2024 22:54:16] "GET / HTTP/1.1" 200 -
+[2024-09-18 22:54:16,813]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [18/Sep/2024 22:54:16] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2024-09-18 22:54:21,402]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [18/Sep/2024 22:54:21] "[33mGET /log HTTP/1.1[0m" 404 -
+[2024-09-18 22:54:25,171]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [18/Sep/2024 22:54:25] "[33mGET /log HTTP/1.1[0m" 404 -
+[2024-09-18 22:54:57,776]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [18/Sep/2024 22:54:57] "[33mGET /log HTTP/1.1[0m" 404 -

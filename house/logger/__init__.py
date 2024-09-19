@@ -25,7 +25,7 @@ format='[%(asctime)s]^;%(levelname)s^;%(lineno)d^;%(filename)s^;%(funcName)s()^;
 level=logging.INFO
 )
 
-def get_log_dataframe(file_path):
+def get_log_data_frame(file_path):
     data=[]
     with open(file_path) as log_file:
         for line in log_file.readlines():
@@ -33,5 +33,5 @@ def get_log_dataframe(file_path):
         log_df=pd.DataFrame(data)
         columns=["Time Stamp","Log level","line number","file name","Function name","message"]
         log_df.columns=columns
-        log_df["log_message"] = log_df['Time Stamp'].astype(str)+":&"+log_df["message"]
-        return log_df[["_log_message"]]
+        log_df["log_message"] = log_df['Time Stamp'].astype(str) +":&"+log_df["message"]
+        return log_df[["log_message"]]

@@ -1,0 +1,33 @@
+[2024-09-19 20:23:50,451]^;INFO^;190^;configuration.py^;get_training_pipeline_config()^;Training pipeline config: TrainingPipelineConfig(artifact_dir='C:\\Users\\prash\\Downloads\\Housing_mlops\\housing\\artifact')
+[2024-09-19 20:23:51,107]^;INFO^;190^;configuration.py^;get_training_pipeline_config()^;Training pipeline config: TrainingPipelineConfig(artifact_dir='C:\\Users\\prash\\Downloads\\Housing_mlops\\housing\\artifact')
+[2024-09-19 20:23:51,295]^;INFO^;224^;_internal.py^;_log()^;[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2024-09-19 20:23:51,295]^;INFO^;224^;_internal.py^;_log()^;[33mPress CTRL+C to quit[0m
+[2024-09-19 20:24:11,755]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [19/Sep/2024 20:24:11] "GET / HTTP/1.1" 200 -
+[2024-09-19 20:24:11,776]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [19/Sep/2024 20:24:11] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2024-09-19 20:24:14,221]^;INFO^;181^;app.py^;render_log_dir()^;req_path:
+[2024-09-19 20:24:14,222]^;INFO^;184^;app.py^;render_log_dir()^;Requested path: housing_logs\
+[2024-09-19 20:24:14,232]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [19/Sep/2024 20:24:14] "GET /housing_logs HTTP/1.1" 200 -
+[2024-09-19 20:24:14,272]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [19/Sep/2024 20:24:14] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2024-09-19 20:24:19,893]^;INFO^;181^;app.py^;render_log_dir()^;req_path:log_2024-09-12_23-33-42.log
+[2024-09-19 20:24:19,894]^;INFO^;184^;app.py^;render_log_dir()^;Requested path: housing_logs\log_2024-09-12_23-33-42.log
+[2024-09-19 20:24:19,955]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [19/Sep/2024 20:24:19] "GET /housing_logs/log_2024-09-12_23-33-42.log HTTP/1.1" 200 -
+[2024-09-19 20:24:19,989]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [19/Sep/2024 20:24:19] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2024-09-19 20:24:26,266]^;ERROR^;1745^;app.py^;log_exception()^;Exception on /saved_models [GET]
+Traceback (most recent call last):
+  File "c:\Users\prash\Downloads\Housing_mlops\venv\lib\site-packages\flask\app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\Users\prash\Downloads\Housing_mlops\venv\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\Users\prash\Downloads\Housing_mlops\venv\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\Users\prash\Downloads\Housing_mlops\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 146, in saved_models_dir
+    return send_file(abs_path)
+  File "c:\Users\prash\Downloads\Housing_mlops\venv\lib\site-packages\flask\helpers.py", line 547, in send_file
+    max_age=max_age,
+  File "c:\Users\prash\Downloads\Housing_mlops\venv\lib\site-packages\werkzeug\utils.py", line 491, in send_file
+    file = open(path, "rb")  # type: ignore
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\prash\\Downloads\\Housing_mlops\\saved_models'
+[2024-09-19 20:24:26,272]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [19/Sep/2024 20:24:26] "[35m[1mGET /saved_models HTTP/1.1[0m" 500 -

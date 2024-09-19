@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"> 
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    
+        <title>House Price Predictions</title>
+    </head>
+    <body>
+        <header class='header'>
+            <h1 class='project-name'> House Price Predictions</h1>
+            <nav class='main-nav'>
+                <ul class='main-nav-list'>
+                    
+                    <li><a href="{{url_for('index') }}"class='btns'>Home</a></li>
+                    <li><a href="/housing_logs" class="btns {% if 'housing_logs' in request.path %} active {% endif %}">View Logs</a></li>
+                    <li><a href="/artifact" class="btns {% if 'artifact' in request.path %} active {% endif %}">View Artifacts</a></li>
+                    <li><a href="/saved_models" class="btns {% if 'saved_models' in request.path %} active {% endif %}">View Trained Model</a></li>
+                    <li><a href="/predict" class="btns {% if 'predict' in request.path %} active {% endif %}">Estimating House Price</a></li>
+                    <li><a href="/view_experiment_hist" class="btns {% if 'predict' in request.path %} active {% endif %}">Experimant History</a></li>
+                <ul>
+            </nav>
+        </header>
+        <div class="container">
+            <div class='list'>
+                <ul class='left-list'>
+                    <li><a  href="/housing_logs" class="btns {% if 'housing_logs' in request.path %} active {% endif %}">View Logs</a></li>
+                    <li><a href="/artifact" class="btns {% if 'artifact' in request.path %} active {% endif %}">View Artifacts</a></li>
+                    <li><a href="/saved_models"class="btns {% if 'saved_models' in request.path %} active {% endif %}">View Trained Model</a></li>
+                    <li><a href="/predict"class="btns {% if 'predict' in request.path %} active {% endif %}">Estimating House Price</a></li>
+                    <li><a href="/train"class="btns {% if 'train' in request.path %} active {% endif %}">Train Housing Price Estimator</a></li>
+                    <li><a href="/update_model_config"class="btns {% if 'update_model_config' in request.path %} active {% endif %}">Update Model Config</a></li>
+                <ul>
+            </div>
+            <div class='main'>
+                <main>
+                    {%block content%}
+
+                    {%endblock%}
+                </main>
+            </div>
+        </div>
+
+        <!--Footer goes here-->
+
+        <footer>
+            <div class="container-footer">
+                <section class="footer-details">
+                    <!--facebook-->
+                    <a class="f-btn1 s1" href='#!' role="button" ><i class="fab fa-facebook-f"></i></a>
+                    <!--Twitter-->
+                    <a class="f-btn1" href='#!' role="button" ><i class="fab fa-twitter"></i></a>
+                    <!--Googel-->
+                    <a class="f-btn1" href='#!' role="button" ><i class="fab fa-google"></i></a>
+                    <!--Instagram-->
+                    <a class="f-btn1" href='#!' role="button" ><i class="fab fa-instagram"></i></a>
+                    <!--github-->
+                    <a class="f-btn1" href='#!' role="button" ><i class="fab fa-github"></i></a>
+                    <!--linkdlin-->
+                    <a class="f-btn1" href='#!' role="button" ><i class="fab fa-linkedin"></i></a>
+            
+                </section>
+                <div class="copy-right">
+                    © 2024 Copyright:
+                    <a class="link" href='!#'>Prashant Kumar Singh</a>
+                </div>
+            </div>
+        
+        </footer>
+    </body>
+</html>

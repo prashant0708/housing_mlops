@@ -1,0 +1,44 @@
+[2024-09-19 20:58:53,430]^;INFO^;190^;configuration.py^;get_training_pipeline_config()^;Training pipeline config: TrainingPipelineConfig(artifact_dir='C:\\Users\\prash\\Downloads\\Housing_mlops\\housing\\artifact')
+[2024-09-19 20:58:54,198]^;INFO^;190^;configuration.py^;get_training_pipeline_config()^;Training pipeline config: TrainingPipelineConfig(artifact_dir='C:\\Users\\prash\\Downloads\\Housing_mlops\\housing\\artifact')
+[2024-09-19 20:58:54,367]^;INFO^;224^;_internal.py^;_log()^;[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2024-09-19 20:58:54,368]^;INFO^;224^;_internal.py^;_log()^;[33mPress CTRL+C to quit[0m
+[2024-09-19 20:58:57,767]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [19/Sep/2024 20:58:57] "GET / HTTP/1.1" 200 -
+[2024-09-19 20:58:57,892]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [19/Sep/2024 20:58:57] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2024-09-19 20:58:59,875]^;INFO^;138^;app.py^;saved_models_dir()^;req_path:
+[2024-09-19 20:58:59,876]^;INFO^;139^;app.py^;saved_models_dir()^;req_path:C:\Users\prash\Downloads\Housing_mlops\saved_models\
+[2024-09-19 20:58:59,899]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [19/Sep/2024 20:58:59] "GET /saved_models HTTP/1.1" 200 -
+[2024-09-19 20:58:59,954]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [19/Sep/2024 20:58:59] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2024-09-19 20:59:12,926]^;INFO^;138^;app.py^;saved_models_dir()^;req_path:20240913003241
+[2024-09-19 20:59:12,926]^;INFO^;139^;app.py^;saved_models_dir()^;req_path:C:\Users\prash\Downloads\Housing_mlops\saved_models\20240913003241
+[2024-09-19 20:59:12,927]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [19/Sep/2024 20:59:12] "GET /saved_models/20240913003241 HTTP/1.1" 200 -
+[2024-09-19 20:59:12,960]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [19/Sep/2024 20:59:12] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2024-09-19 20:59:39,440]^;INFO^;138^;app.py^;saved_models_dir()^;req_path:C:/Users/prash/Downloads/Housing_mlops/saved_models
+[2024-09-19 20:59:39,441]^;INFO^;139^;app.py^;saved_models_dir()^;req_path:C:/Users/prash/Downloads/Housing_mlops/saved_models
+[2024-09-19 20:59:39,443]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [19/Sep/2024 20:59:39] "GET /saved_models/C:/Users/prash/Downloads/Housing_mlops/saved_models HTTP/1.1" 200 -
+[2024-09-19 20:59:39,477]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [19/Sep/2024 20:59:39] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2024-09-19 21:01:19,818]^;INFO^;138^;app.py^;saved_models_dir()^;req_path:C:/Users/prash/Downloads/Housing_mlops/saved_models
+[2024-09-19 21:01:19,818]^;INFO^;139^;app.py^;saved_models_dir()^;req_path:C:/Users/prash/Downloads/Housing_mlops/saved_models
+[2024-09-19 21:01:19,820]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [19/Sep/2024 21:01:19] "GET /saved_models/C:/Users/prash/Downloads/Housing_mlops/saved_models HTTP/1.1" 200 -
+[2024-09-19 21:01:19,842]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [19/Sep/2024 21:01:19] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2024-09-19 21:01:21,977]^;INFO^;138^;app.py^;saved_models_dir()^;req_path:C:/Users/prash/Downloads/Housing_mlops/saved_models
+[2024-09-19 21:01:21,977]^;INFO^;139^;app.py^;saved_models_dir()^;req_path:C:/Users/prash/Downloads/Housing_mlops/saved_models
+[2024-09-19 21:01:21,979]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [19/Sep/2024 21:01:21] "GET /saved_models/C:/Users/prash/Downloads/Housing_mlops/saved_models HTTP/1.1" 200 -
+[2024-09-19 21:01:22,005]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [19/Sep/2024 21:01:22] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2024-09-19 21:01:22,871]^;INFO^;138^;app.py^;saved_models_dir()^;req_path:C:/Users/prash/Downloads/Housing_mlops/saved_models
+[2024-09-19 21:01:22,871]^;INFO^;139^;app.py^;saved_models_dir()^;req_path:C:/Users/prash/Downloads/Housing_mlops/saved_models
+[2024-09-19 21:01:22,873]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [19/Sep/2024 21:01:22] "GET /saved_models/C:/Users/prash/Downloads/Housing_mlops/saved_models HTTP/1.1" 200 -
+[2024-09-19 21:01:22,903]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [19/Sep/2024 21:01:22] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2024-09-19 21:01:25,514]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [19/Sep/2024 21:01:25] "[33mGET /artifact HTTP/1.1[0m" 404 -
+[2024-09-19 21:01:27,837]^;INFO^;138^;app.py^;saved_models_dir()^;req_path:
+[2024-09-19 21:01:27,838]^;INFO^;139^;app.py^;saved_models_dir()^;req_path:C:\Users\prash\Downloads\Housing_mlops\saved_models\
+[2024-09-19 21:01:27,842]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [19/Sep/2024 21:01:27] "GET /saved_models HTTP/1.1" 200 -
+[2024-09-19 21:01:27,884]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [19/Sep/2024 21:01:27] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2024-09-19 21:08:43,619]^;INFO^;184^;app.py^;render_log_dir()^;req_path:
+[2024-09-19 21:08:43,621]^;INFO^;187^;app.py^;render_log_dir()^;Requested path: housing_logs\
+[2024-09-19 21:08:43,631]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [19/Sep/2024 21:08:43] "GET /housing_logs HTTP/1.1" 200 -
+[2024-09-19 21:08:43,687]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [19/Sep/2024 21:08:43] "GET /static/style.css HTTP/1.1" 200 -
+[2024-09-19 21:08:47,454]^;INFO^;138^;app.py^;saved_models_dir()^;req_path:
+[2024-09-19 21:08:47,454]^;INFO^;139^;app.py^;saved_models_dir()^;req_path:C:\Users\prash\Downloads\Housing_mlops\saved_models\
+[2024-09-19 21:08:47,456]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [19/Sep/2024 21:08:47] "GET /saved_models HTTP/1.1" 200 -
+[2024-09-19 21:08:47,499]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [19/Sep/2024 21:08:47] "GET /static/style.css HTTP/1.1" 200 -

@@ -1,0 +1,23 @@
+[2024-09-13 00:38:57,316]^;INFO^;190^;configuration.py^;get_training_pipeline_config()^;Training pipeline config: TrainingPipelineConfig(artifact_dir='C:\\Users\\prash\\Downloads\\Housing_mlops\\housing\\artifact')
+[2024-09-13 00:38:57,878]^;INFO^;190^;configuration.py^;get_training_pipeline_config()^;Training pipeline config: TrainingPipelineConfig(artifact_dir='C:\\Users\\prash\\Downloads\\Housing_mlops\\housing\\artifact')
+[2024-09-13 00:38:58,081]^;INFO^;224^;_internal.py^;_log()^;[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2024-09-13 00:38:58,081]^;INFO^;224^;_internal.py^;_log()^;[33mPress CTRL+C to quit[0m
+[2024-09-13 00:39:12,246]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [13/Sep/2024 00:39:12] "GET / HTTP/1.1" 200 -
+[2024-09-13 00:39:12,297]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [13/Sep/2024 00:39:12] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2024-09-13 00:39:14,756]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [13/Sep/2024 00:39:14] "GET /predict HTTP/1.1" 200 -
+[2024-09-13 00:39:14,810]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [13/Sep/2024 00:39:14] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2024-09-13 00:39:28,014]^;ERROR^;1745^;app.py^;log_exception()^;Exception on /predict [POST]
+Traceback (most recent call last):
+  File "c:\Users\prash\Downloads\Housing_mlops\venv\lib\site-packages\flask\app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\Users\prash\Downloads\Housing_mlops\venv\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\Users\prash\Downloads\Housing_mlops\venv\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\Users\prash\Downloads\Housing_mlops\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 117, in predict
+    median_housing_value= housing_predictor.predict(x=housing_df)
+TypeError: predict() got an unexpected keyword argument 'x'
+[2024-09-13 00:39:28,017]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [13/Sep/2024 00:39:28] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
