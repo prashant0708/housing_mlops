@@ -17,7 +17,7 @@ import  pandas as pd
 
 ROOT_DIR=os.getcwd()
 LOG_FOLDER_NAME="housing_logs"
-PIPELINE_FOLDER_NAME="house"
+PIPELINE_FOLDER_NAME="housing"
 SAVED_MODEL_DIR_NAME="saved_models"
 MODEL_CONFIG_FILE_PATH=os.path.join(ROOT_DIR,CONFIG_DIR,"model.yaml")
 LOG_DIR=os.path.join(ROOT_DIR,LOG_FOLDER_NAME)
@@ -32,14 +32,15 @@ MEDIAN_HOUSING_VALUE_KEY="median_housing_value"
 
 app= Flask(__name__)
 
-@app.route('/artifacts',defaults={'req_path':'housing'})
-@app.route('/artifact/<path:req_path>')
+@app.route('/artifact',defaults={'req_path':'housing'})
+@app.route(f'/artifact/<path:req_path>')
 def render_artifact_dir(req_path):
-    os.makedirs("housing",exist_ok=True)
+    base_dir=os.path.join(os.getcwd(),'housing')
+    os.makedirs(base_dir,exist_ok=True)
     ## joining the base and requested path
     print(f"req_path:{req_path}")
-    abs_path=os.path.join(req_path)
-    print(abs_path)
+    abs_path=os.path.join(os.getcwd(),req_path)
+    print(f"abs_path:{abs_path}")
     #Return 404 if path doesn't exists
     if not os.path.exists(abs_path):
         return abort(404)
@@ -47,10 +48,10 @@ def render_artifact_dir(req_path):
     # check if path is a file and serve
     if os.path.isfile(abs_path):
         if ".html" in abs_path:
-            with open(abs_path,"r",encoding='utf-8') as file:
-                content=''
+            with open(abs_path, "r", encoding="utf-8") as file:
+                content = ''
                 for line in file.readlines():
-                    content=f"{content}{line}"
+                    content = f"{content}{line}"
                 return content
         return send_file(abs_path)
     
@@ -58,7 +59,7 @@ def render_artifact_dir(req_path):
     files={os.path.join(abs_path,file_name):file_name for file_name in os.listdir(abs_path)
            if "artifact" in os.path.join(abs_path,file_name)}
     
-    result= {"files":files,"Parent_folder":os.path.dirname(abs_path),
+    result= {"files":files,"parent_folder":os.path.dirname(abs_path),
              "parent_label":abs_path}
     
     return render_template ('file.html',result=result)
@@ -129,7 +130,7 @@ def predict():
 
 
 @app.route('/saved_models',defaults={'req_path':''})
-@app.route(f'/{SAVED_MODEL_DIR_NAME}/<path:req_path>')
+@app.route(f'/{SAVED_MODEL_DIR_NAME}/<path:req_path>') 
 def saved_models_dir(req_path):
     base_dir=os.path.join(os.getcwd(),SAVED_MODEL_DIR_NAME) ## this is to get the complete path of saved_models
     os.makedirs(base_dir,exist_ok=True)

@@ -1,0 +1,66 @@
+[2024-09-19 22:01:16,260]^;INFO^;190^;configuration.py^;get_training_pipeline_config()^;Training pipeline config: TrainingPipelineConfig(artifact_dir='C:\\Users\\prash\\Downloads\\Housing_mlops\\housing\\artifact')
+[2024-09-19 22:01:16,881]^;INFO^;190^;configuration.py^;get_training_pipeline_config()^;Training pipeline config: TrainingPipelineConfig(artifact_dir='C:\\Users\\prash\\Downloads\\Housing_mlops\\housing\\artifact')
+[2024-09-19 22:01:17,047]^;INFO^;224^;_internal.py^;_log()^;[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2024-09-19 22:01:17,047]^;INFO^;224^;_internal.py^;_log()^;[33mPress CTRL+C to quit[0m
+[2024-09-19 22:01:21,730]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [19/Sep/2024 22:01:21] "GET / HTTP/1.1" 200 -
+[2024-09-19 22:01:21,831]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [19/Sep/2024 22:01:21] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2024-09-19 22:01:24,274]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [19/Sep/2024 22:01:24] "GET / HTTP/1.1" 200 -
+[2024-09-19 22:01:24,356]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [19/Sep/2024 22:01:24] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2024-09-19 22:01:27,451]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [19/Sep/2024 22:01:27] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2024-09-19 22:01:35,393]^;ERROR^;1745^;app.py^;log_exception()^;Exception on /artifact [GET]
+Traceback (most recent call last):
+  File "c:\Users\prash\Downloads\Housing_mlops\venv\lib\site-packages\flask\app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\Users\prash\Downloads\Housing_mlops\venv\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\Users\prash\Downloads\Housing_mlops\venv\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\Users\prash\Downloads\Housing_mlops\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 64, in render_artifact_dir
+    return render_template ('file.html',result=result)
+  File "c:\Users\prash\Downloads\Housing_mlops\venv\lib\site-packages\flask\templating.py", line 146, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "c:\Users\prash\Downloads\Housing_mlops\venv\lib\site-packages\jinja2\environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "c:\Users\prash\Downloads\Housing_mlops\venv\lib\site-packages\jinja2\environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "c:\Users\prash\Downloads\Housing_mlops\venv\lib\site-packages\jinja2\environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "c:\Users\prash\Downloads\Housing_mlops\venv\lib\site-packages\jinja2\loaders.py", line 125, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "c:\Users\prash\Downloads\Housing_mlops\venv\lib\site-packages\flask\templating.py", line 62, in get_source
+    return self._get_source_fast(environment, template)
+  File "c:\Users\prash\Downloads\Housing_mlops\venv\lib\site-packages\flask\templating.py", line 98, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: file.html
+[2024-09-19 22:01:35,468]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [19/Sep/2024 22:01:35] "[35m[1mGET /artifact HTTP/1.1[0m" 500 -
+[2024-09-19 22:01:37,955]^;ERROR^;1745^;app.py^;log_exception()^;Exception on /artifact [GET]
+Traceback (most recent call last):
+  File "c:\Users\prash\Downloads\Housing_mlops\venv\lib\site-packages\flask\app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\Users\prash\Downloads\Housing_mlops\venv\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\Users\prash\Downloads\Housing_mlops\venv\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\Users\prash\Downloads\Housing_mlops\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 64, in render_artifact_dir
+    return render_template ('file.html',result=result)
+  File "c:\Users\prash\Downloads\Housing_mlops\venv\lib\site-packages\flask\templating.py", line 146, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "c:\Users\prash\Downloads\Housing_mlops\venv\lib\site-packages\jinja2\environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "c:\Users\prash\Downloads\Housing_mlops\venv\lib\site-packages\jinja2\environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "c:\Users\prash\Downloads\Housing_mlops\venv\lib\site-packages\jinja2\environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "c:\Users\prash\Downloads\Housing_mlops\venv\lib\site-packages\jinja2\loaders.py", line 125, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "c:\Users\prash\Downloads\Housing_mlops\venv\lib\site-packages\flask\templating.py", line 62, in get_source
+    return self._get_source_fast(environment, template)
+  File "c:\Users\prash\Downloads\Housing_mlops\venv\lib\site-packages\flask\templating.py", line 98, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: file.html
+[2024-09-19 22:01:37,956]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [19/Sep/2024 22:01:37] "[35m[1mGET /artifact HTTP/1.1[0m" 500 -

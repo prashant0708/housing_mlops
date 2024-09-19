@@ -1,0 +1,11 @@
+[2024-09-19 21:12:03,696]^;INFO^;190^;configuration.py^;get_training_pipeline_config()^;Training pipeline config: TrainingPipelineConfig(artifact_dir='C:\\Users\\prash\\Downloads\\Housing_mlops\\housing\\artifact')
+[2024-09-19 21:12:04,345]^;INFO^;190^;configuration.py^;get_training_pipeline_config()^;Training pipeline config: TrainingPipelineConfig(artifact_dir='C:\\Users\\prash\\Downloads\\Housing_mlops\\housing\\artifact')
+[2024-09-19 21:12:04,489]^;INFO^;224^;_internal.py^;_log()^;[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2024-09-19 21:12:04,491]^;INFO^;224^;_internal.py^;_log()^;[33mPress CTRL+C to quit[0m
+[2024-09-19 21:13:33,608]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [19/Sep/2024 21:13:33] "GET / HTTP/1.1" 200 -
+[2024-09-19 21:13:33,683]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [19/Sep/2024 21:13:33] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2024-09-19 21:13:35,519]^;INFO^;138^;app.py^;saved_models_dir()^;req_path:
+[2024-09-19 21:13:35,519]^;INFO^;139^;app.py^;saved_models_dir()^;req_path:C:\Users\prash\Downloads\Housing_mlops\saved_models\
+[2024-09-19 21:13:35,532]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [19/Sep/2024 21:13:35] "GET /saved_models HTTP/1.1" 200 -
+[2024-09-19 21:13:35,573]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [19/Sep/2024 21:13:35] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
