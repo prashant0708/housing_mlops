@@ -74,6 +74,8 @@ def index():
 @app.route('/view_experiment_hist',methods=['GET','POST'])
 def view_experiment_history():
     experiment_df =Pipelines.get_experiments_status()
+    logging.info(experiment_df)
+    print(experiment_df)
     context={
         "experiment": experiment_df.to_html(classes='table table-striped col-12')
     }

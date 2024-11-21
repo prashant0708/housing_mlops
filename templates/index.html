@@ -25,13 +25,13 @@
     <h2 class='box-header'>View Artifacts</h2>
     <h3 class='box-subheader'>Artifacts Files</h3>
     <p class='log-content'>All the model artifacts file can be downloaded</p>
-    <a class='log-download' href='/log'>Check Artifacts</a>
+    <a class="log-download {% if 'artifact' in request.path %} active {% endif %}" href="/artifact">View Artifacts</a>
   </div>
   <div class='box-3'>
     <h2 class='box-header'>View Trained Model</h2>
     <h3 class='box-subheader'>Trained Model</h3>
     <p class='log-content'>All the model  file can be downloaded</p>
-    <a class='log-download' href='/log'>Check Models</a>
+    <a class="log-download {% if 'saved_models' in request.path %} active {% endif %}" href="/saved_models">Check Models</a>
   </div>
   <div class='box-4'>
     <h2 class='box-header'>Estimate California Price</h2>
@@ -40,9 +40,9 @@
     <a class="log-download {% if 'predict' in request.path %} active {% endif %}" href='/predict' >Get Estimaed Price</a>
   </div>
   <div class='box-5'>
-    <h2 class='box-header'>View Trained Models</h2>
-    <h3 class='box-subheader'>Trained Models</h3>
-    <p class='log-content'>All models file can be down </p>
+    <h2 class='box-header'>Train Housing estimator model</h2>
+    <h3 class='box-subheader'>Initiate model training</h3>
+    <p class='log-content'>Model training will be done.Files such as log,artifacts and models can be viewed and downloads using appropriate link</p>
     <a class='log-download' href='/log'>Check Models</a>
   </div>
 </div>

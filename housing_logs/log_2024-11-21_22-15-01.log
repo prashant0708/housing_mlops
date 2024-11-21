@@ -1,0 +1,75 @@
+[2024-11-21 22:15:10,621]^;INFO^;190^;configuration.py^;get_training_pipeline_config()^;Training pipeline config: TrainingPipelineConfig(artifact_dir='C:\\Users\\prash\\Downloads\\Housing_mlops\\housing\\artifact')
+[2024-11-21 22:15:13,071]^;INFO^;190^;configuration.py^;get_training_pipeline_config()^;Training pipeline config: TrainingPipelineConfig(artifact_dir='C:\\Users\\prash\\Downloads\\Housing_mlops\\housing\\artifact')
+[2024-11-21 22:15:13,942]^;INFO^;224^;_internal.py^;_log()^;[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2024-11-21 22:15:13,942]^;INFO^;224^;_internal.py^;_log()^;[33mPress CTRL+C to quit[0m
+[2024-11-21 22:16:18,386]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [21/Nov/2024 22:16:18] "GET / HTTP/1.1" 200 -
+[2024-11-21 22:16:18,441]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [21/Nov/2024 22:16:18] "GET / HTTP/1.1" 200 -
+[2024-11-21 22:16:18,453]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [21/Nov/2024 22:16:18] "GET / HTTP/1.1" 200 -
+[2024-11-21 22:16:18,550]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [21/Nov/2024 22:16:18] "GET /static/style.css HTTP/1.1" 200 -
+[2024-11-21 22:16:18,555]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [21/Nov/2024 22:16:18] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2024-11-21 22:16:18,560]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [21/Nov/2024 22:16:18] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2024-11-21 22:16:21,134]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [21/Nov/2024 22:16:21] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2024-11-21 22:16:21,142]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [21/Nov/2024 22:16:21] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2024-11-21 22:16:21,159]^;INFO^;190^;configuration.py^;get_training_pipeline_config()^;Training pipeline config: TrainingPipelineConfig(artifact_dir='C:\\Users\\prash\\Downloads\\Housing_mlops\\housing\\artifact')
+[2024-11-21 22:16:21,183]^;INFO^;215^;pipeline.py^;get_experiments_status()^;Pipeline experiment_path: C:\Users\prash\Downloads\Housing_mlops\housing\artifact\experiment\experiment.csv
+[2024-11-21 22:16:21,442]^;INFO^;77^;app.py^;view_experiment_history()^;    aea95c55-75f3-4d88-82f1-546b0c32ce3e  2024-09-22-23-42-19 2024-09-22-23-42-19.1  ...  Unnamed: 9 Unnamed: 10 2024-09-22 23:42:21.132881.1
+18  3feff230-81a3-4bb2-9e59-7f3ee8196eb8  2024-09-28-18-28-32   2024-09-28-18-28-32  ...    0.652281        True   2024-09-28 18:28:36.864459
+19  d6a0850a-fe59-48bd-824c-0b4225935462  2024-09-28-18-32-43   2024-09-28-18-32-43  ...         NaN         NaN   2024-09-28 18:32:45.211683
+20  d6a0850a-fe59-48bd-824c-0b4225935462  2024-09-28-18-32-43   2024-09-28-18-32-43  ...    0.652281        True   2024-09-28 18:32:47.876400
+21  30424eb7-3df6-4866-b191-17c94a9e60bc  2024-09-28-18-41-36   2024-09-28-18-41-36  ...         NaN         NaN   2024-09-28 18:41:38.427036
+22  30424eb7-3df6-4866-b191-17c94a9e60bc  2024-09-28-18-41-36   2024-09-28-18-41-36  ...    0.652281        True   2024-09-28 18:41:40.950023
+
+[5 rows x 12 columns]
+[2024-11-21 22:16:21,617]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [21/Nov/2024 22:16:21] "GET /view_experiment_hist HTTP/1.1" 200 -
+[2024-11-21 22:16:21,666]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [21/Nov/2024 22:16:21] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2024-11-21 22:16:23,731]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [21/Nov/2024 22:16:23] "GET /predict HTTP/1.1" 200 -
+[2024-11-21 22:16:23,757]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [21/Nov/2024 22:16:23] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2024-11-21 22:16:25,197]^;INFO^;141^;app.py^;saved_models_dir()^;req_path:
+[2024-11-21 22:16:25,197]^;INFO^;142^;app.py^;saved_models_dir()^;req_path:C:\Users\prash\Downloads\Housing_mlops\saved_models\
+[2024-11-21 22:16:25,224]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [21/Nov/2024 22:16:25] "GET /saved_models HTTP/1.1" 200 -
+[2024-11-21 22:16:25,264]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [21/Nov/2024 22:16:25] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2024-11-21 22:16:26,849]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [21/Nov/2024 22:16:26] "GET /artifact HTTP/1.1" 200 -
+[2024-11-21 22:16:26,877]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [21/Nov/2024 22:16:26] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2024-11-21 22:16:27,859]^;INFO^;187^;app.py^;render_log_dir()^;req_path:
+[2024-11-21 22:16:27,860]^;INFO^;190^;app.py^;render_log_dir()^;Requested path: housing_logs\
+[2024-11-21 22:16:27,878]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [21/Nov/2024 22:16:27] "GET /housing_logs HTTP/1.1" 200 -
+[2024-11-21 22:16:27,908]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [21/Nov/2024 22:16:27] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2024-11-21 22:16:28,750]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [21/Nov/2024 22:16:28] "GET / HTTP/1.1" 200 -
+[2024-11-21 22:16:28,778]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [21/Nov/2024 22:16:28] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2024-11-21 22:16:32,204]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [21/Nov/2024 22:16:32] "GET /predict HTTP/1.1" 200 -
+[2024-11-21 22:16:32,242]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [21/Nov/2024 22:16:32] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2024-11-21 22:16:34,773]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [21/Nov/2024 22:16:34] "GET / HTTP/1.1" 200 -
+[2024-11-21 22:16:34,815]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [21/Nov/2024 22:16:34] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2024-11-21 22:16:36,521]^;INFO^;141^;app.py^;saved_models_dir()^;req_path:
+[2024-11-21 22:16:36,521]^;INFO^;142^;app.py^;saved_models_dir()^;req_path:C:\Users\prash\Downloads\Housing_mlops\saved_models\
+[2024-11-21 22:16:36,523]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [21/Nov/2024 22:16:36] "GET /saved_models HTTP/1.1" 200 -
+[2024-11-21 22:16:36,548]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [21/Nov/2024 22:16:36] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2024-11-21 22:16:40,704]^;ERROR^;178^;app.py^;update_model_config()^;'Request' object has no attribute 'methods'
+Traceback (most recent call last):
+  File "app.py", line 168, in update_model_config
+    if request.methods=='POST':
+AttributeError: 'Request' object has no attribute 'methods'
+[2024-11-21 22:16:40,710]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [21/Nov/2024 22:16:40] "GET /update_model_config HTTP/1.1" 200 -
+[2024-11-21 22:16:45,977]^;ERROR^;1745^;app.py^;log_exception()^;Exception on /train [GET]
+Traceback (most recent call last):
+  File "c:\Users\prash\Downloads\Housing_mlops\venv\lib\site-packages\flask\app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\Users\prash\Downloads\Housing_mlops\venv\lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\Users\prash\Downloads\Housing_mlops\venv\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\Users\prash\Downloads\Housing_mlops\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 88, in train
+    pipeline=Pipelines(config=Configuration(current_time_stamp=get_current_time_stamp()))
+NameError: name 'get_current_time_stamp' is not defined
+[2024-11-21 22:16:45,987]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [21/Nov/2024 22:16:45] "[35m[1mGET /train HTTP/1.1[0m" 500 -
+[2024-11-21 22:16:50,626]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [21/Nov/2024 22:16:50] "GET /predict HTTP/1.1" 200 -
+[2024-11-21 22:16:50,657]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [21/Nov/2024 22:16:50] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2024-11-21 22:16:53,255]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [21/Nov/2024 22:16:53] "GET /predict HTTP/1.1" 200 -
+[2024-11-21 22:16:53,310]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [21/Nov/2024 22:16:53] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2024-11-21 22:16:56,643]^;INFO^;141^;app.py^;saved_models_dir()^;req_path:
+[2024-11-21 22:16:56,643]^;INFO^;142^;app.py^;saved_models_dir()^;req_path:C:\Users\prash\Downloads\Housing_mlops\saved_models\
+[2024-11-21 22:16:56,646]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [21/Nov/2024 22:16:56] "GET /saved_models HTTP/1.1" 200 -
+[2024-11-21 22:16:56,696]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [21/Nov/2024 22:16:56] "[36mGET /static/style.css HTTP/1.1[0m" 304 -

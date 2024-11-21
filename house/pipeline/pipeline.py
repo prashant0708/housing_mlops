@@ -6,8 +6,6 @@ import pandas as pd
 from typing import List
 from threading import Thread
 from multiprocessing import Process
-
-
 from house.config.configuration import  Configuration
 from house.logger import logging , get_log_file_name
 from house.exception import HouseException
@@ -39,8 +37,11 @@ class Pipelines(Thread):
             training_pipeline_config=self.config.get_training_pipeline_config()
             os.makedirs(training_pipeline_config.artifact_dir,exist_ok=True)
             Pipelines.experiment_file_path=os.path.join(training_pipeline_config.artifact_dir,EXPERIMENT_DIR_NAME,EXPERIMENT_FILE_NAME)
+            print(Pipelines.experiment_file_path)
         except Exception as e:
             raise HouseException(e,sys) from e
+        
+    
         
     def start_data_ingestion(self)->DataIngestionArtifact:
         try:
@@ -181,6 +182,7 @@ class Pipelines(Thread):
                 experiment_dict.update({
                     "created_time_stamp":[datetime.now()],
                     "experiment_file_path":[os.path.basename(file_path)]})
+                logging.info(f"experiment_dict:{experiment_dict}")
                 
                 experiment_report = pd.DataFrame(experiment_dict)
                 
@@ -188,19 +190,34 @@ class Pipelines(Thread):
                 if os.path.exists(Pipelines.experiment_file_path):
                     experiment_report.to_csv(Pipelines.experiment_file_path,index=False,header=False,mode="a")
                 else:
-                    experiment_report.to_csv(Pipelines.experiment_file_path,index=False,header=False,mode="w")
+                    experiment_report.to_csv(Pipelines.experiment_file_path,header=False,index=False,mode="w")
             else:
                 print("First start experiment")
+        except Exception as e:
+            raise HouseException(e,sys) from e
+        
+    @classmethod    
+    def pipeline_exp_file_path(cls):
+        try:
+           # if cls.experiment_file_path is None:
+            instance=cls()
+            file_path=instance.experiment_file_path
+            return file_path
+            logging.info(f"file_path{file_path}")
         except Exception as e:
             raise HouseException(e,sys) from e
         
     @classmethod
     def get_experiments_status(cls, limit: int = 5) -> pd.DataFrame:
         try:
-            if os.path.exists(Pipelines.experiment_file_path):
-                df = pd.read_csv(Pipelines.experiment_file_path)
+            exp_file_path=cls.pipeline_exp_file_path()
+            print(exp_file_path)
+            logging.info(f"Pipeline experiment_path: {exp_file_path}")
+            if os.path.exists(exp_file_path):
+                print(f"this before the pandas read{exp_file_path}")
+                df = pd.read_csv(exp_file_path)
                 limit = -1 * int(limit)
-                return df[limit:].drop(columns=["experiment_file_path", "initialization_timestamp"], axis=1)
+                return df[limit:]
             else:
                 return pd.DataFrame()
         except Exception as e:

@@ -13,6 +13,7 @@ def main():
    
     pipelines= Pipelines()
     pipelines.run_pipeline()
+    pipelines.get_experiments_status()
     #data_validation=DataValidation(DataValidationConfig,DataIngestionArtifact).is_train_test_file_exists()
     #print(data_validation)
     #data_transformation=Configuration().get_data_transformation_config()

@@ -147,10 +147,19 @@
   .box-1,
   .box-2,
   .box-3,
-  .box-4,
-  .box-5 {
+  
+  .box-4 {
     width: 20rem;
     height: 12rem;
+    background-color: #f0f8ff;
+    border: 2px solid #979595;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+  }
+  .box-5{
+    width: 20rem;
+    height: 15rem;
     background-color: #f0f8ff;
     border: 2px solid #979595;
     border-radius: 10px;
